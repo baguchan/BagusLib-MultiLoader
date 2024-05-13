@@ -1,12 +1,17 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.example.examplemod.mixin",
+  "package": "baguchan.bagus_lib.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "client": [
-    "MixinMinecraft"
+    "client.ClientPacketListenerMixin",
+    "client.HierarchicalModelMixin",
+    "client.HumanoidModelMixin",
+    "client.LivingEntityRendererMixin",
+    "client.PlayerModelMixin",
+    "client.QuadrupedModelMixin"
   ],
   "server": [],
   "injectors": {

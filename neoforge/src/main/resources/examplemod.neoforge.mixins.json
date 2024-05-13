@@ -1,11 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.example.examplemod.mixin",
+  "package": "com.baguchan.examplemod.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "client": [
-    "MixinTitleScreen"
+    "baguchan.examplemod.mixin.MixinTitleScreen"
   ],
   "server": [],
   "injectors": {
