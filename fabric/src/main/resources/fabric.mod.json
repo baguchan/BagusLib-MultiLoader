@@ -16,7 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "example.examplemod.ExampleMod"
+            "bagu_chan.bagus_lib.BagusLib"
+        ],
+        "client": [
+            "bagu_chan.bagus_lib.BagusLibClient"
         ]
     },
     "mixins": [

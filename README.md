@@ -27,7 +27,7 @@ Loader specific projects such as the NeoForge and Fabric project are used to loa
 
 While the MultiLoader Template includes support for many platforms and loaders you can easily remove support for the
 ones you don't need. This can be done by deleting the subproject folder and then removing it from the `settings.gradle`
-file. For baguchan if you wanted to remove support for Forge you would follow the following steps.
+file. For bagu_chan if you wanted to remove support for Forge you would follow the following steps.
 
-1. Delete the subproject folder. For baguchan, delete `MultiLoader-Template/forge`.
-2. Remove the project from `settings.gradle`. For baguchan, remove `include("forge")`. 
+1. Delete the subproject folder. For bagu_chan, delete `MultiLoader-Template/forge`.
+2. Remove the project from `settings.gradle`. For bagu_chan, remove `include("forge")`. 
