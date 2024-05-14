@@ -10,7 +10,7 @@ public class DialogOverlay implements LayeredDraw.Layer {
     @Override
     public void render(GuiGraphics guiGraphics, float f) {
         if (!(Minecraft.getInstance().screen instanceof WinScreen)) {
-            DialogHandler.INSTANCE.renderDialogue(guiGraphics, f, Minecraft.getInstance().gui.getGuiTicks());
+            DialogHandler.INSTANCE.renderDialogue(guiGraphics, Minecraft.getInstance().getFrameTime(), Minecraft.getInstance().gui.getGuiTicks());
         }
     }
 }
