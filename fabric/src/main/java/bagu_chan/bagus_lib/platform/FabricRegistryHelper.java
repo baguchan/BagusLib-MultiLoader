@@ -19,6 +19,7 @@ import static bagu_chan.bagus_lib.Constants.MOD_ID;
 public class FabricRegistryHelper implements IRegistryHelper {
     @Override
     public void init() {
+        ModDialogs.init();
         ModStructureProcessorTypes.init();
     }
 

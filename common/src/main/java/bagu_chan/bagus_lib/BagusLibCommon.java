@@ -1,7 +1,6 @@
 package bagu_chan.bagus_lib;
 
 import bagu_chan.bagus_lib.platform.Services;
-import bagu_chan.bagus_lib.registry.ModNetwork;
 
 // This class is part of the common project meaning it is shared between all supported loaders. Code written here can only
 // import and access the vanilla codebase, libraries used by vanilla, and optionally third party libraries that provide
@@ -20,6 +19,5 @@ public class BagusLibCommon {
         // we have an interface in the common code and use a loader specific implementation to delegate our call to
         // the platform specific approach.
         Services.REGISTRY.init();
-        ModNetwork.init();
     }
 }

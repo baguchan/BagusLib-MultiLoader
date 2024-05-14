@@ -29,6 +29,7 @@ public class NeoForgeRegistryHelper implements IRegistryHelper {
         STRUCTURE_PROCESSOR.register(modEventBus);
         DIALOG_TYPE.register(modEventBus);
 
+        ModDialogs.init();
         ModStructureProcessorTypes.init();
     }
 

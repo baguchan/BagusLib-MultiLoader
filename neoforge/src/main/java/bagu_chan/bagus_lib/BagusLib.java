@@ -3,10 +3,12 @@ package bagu_chan.bagus_lib;
 
 import bagu_chan.bagus_lib.command.DialogCommand;
 import bagu_chan.bagus_lib.register.ModLootModifiers;
+import bagu_chan.bagus_lib.registry.ModNetwork;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 
@@ -23,9 +25,14 @@ public class BagusLib {
         ModLootModifiers.LOOT_MODIFIERS.register(eventBus);
         BagusLibCommon.init();
         NeoForge.EVENT_BUS.addListener(this::registerCommands);
-
+        eventBus.addListener(this::registerSetUp);
         modContainer.registerConfig(ModConfig.Type.CLIENT, BagusConfigs.CLIENT_SPEC);
     }
+
+    private void registerSetUp(FMLCommonSetupEvent event) {
+        ModNetwork.init();
+    }
+
 
     private void registerCommands(RegisterCommandsEvent evt) {
         DialogCommand.register(evt.getDispatcher(), evt.getBuildContext());

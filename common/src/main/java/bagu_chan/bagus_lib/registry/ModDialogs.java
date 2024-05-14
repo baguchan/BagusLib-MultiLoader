@@ -17,13 +17,17 @@ import static net.minecraft.resources.ResourceKey.createRegistryKey;
 public class ModDialogs {
     public static final ResourceKey<Registry<DialogType>> DIALOG_REGISTRY_KEY = createRegistryKey(new ResourceLocation(Constants.MOD_ID, "dialog"));
 
+    private static Registry<DialogType> registry = Services.REGISTRY.registerNewRegistry(DIALOG_REGISTRY_KEY, new ResourceLocation(Constants.MOD_ID, "dialog"));
+
+
     public static final Supplier<DialogType> DIALOGS = Services.REGISTRY.registerDialogType("dialog", DialogType::new);
     public static final Supplier<DialogType> IMAGE_DIALOG = Services.REGISTRY.registerDialogType("image_dialog", ImageDialogType::new);
     public static final Supplier<DialogType> ITEM_DIALOG = Services.REGISTRY.registerDialogType("item_dialog", ItemDialogType::new);
     public static final Supplier<DialogType> WIN_DIALOG = Services.REGISTRY.registerDialogType("win_dialog", WinDialogType::new);
 
+    public static void init() {
 
-    private static Registry<DialogType> registry = Services.REGISTRY.registerNewRegistry(DIALOG_REGISTRY_KEY, new ResourceLocation(Constants.MOD_ID, "dialog"));
+    }
 
     public static Registry<DialogType> getRegistry() {
         if (registry == null) {

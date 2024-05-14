@@ -1,6 +1,7 @@
 package bagu_chan.bagus_lib;
 
 import bagu_chan.bagus_lib.command.DialogCommand;
+import bagu_chan.bagus_lib.registry.ModNetwork;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 
@@ -18,5 +19,6 @@ public class BagusLib implements ModInitializer {
         CommandRegistrationCallback.EVENT.register((dispatcher, dedicated, selection) -> {
             DialogCommand.register(dispatcher, dedicated);
         });
+        ModNetwork.init();
     }
 }

@@ -34,7 +34,7 @@ public class DialogCommand {
 
     public static void register(CommandDispatcher<CommandSourceStack> p_138061_, CommandBuildContext p_214450_) {
         LiteralCommandNode<CommandSourceStack> literalcommandnode = p_138061_.register(
-                Commands.literal("bagus_lib").requires(p_136627_ -> p_136627_.hasPermission(2)).then(Commands.literal("dialog")
+                Commands.literal("bagus_dialog").requires(p_136627_ -> p_136627_.hasPermission(2)).then(Commands.literal("dialog")
                         .then(
                                 Commands.argument("targets", EntityArgument.players()).then(Commands.argument("dialog_type", ResourceKeyArgument.key(ModDialogs.DIALOG_REGISTRY_KEY)).then(Commands.argument("tag", CompoundTagArgument.compoundTag()).executes(p_248155_ -> {
                                                     ;

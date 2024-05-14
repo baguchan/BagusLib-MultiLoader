@@ -96,4 +96,9 @@ public abstract class WinScreenMixin extends Screen {
         }
     }
 
+
+    @Inject(method = "onClose", at = @At("HEAD"), cancellable = true)
+    public void onClose(CallbackInfo ci) {
+        DialogHandler.INSTANCE.removeDialogType("Something");
+    }
 }
